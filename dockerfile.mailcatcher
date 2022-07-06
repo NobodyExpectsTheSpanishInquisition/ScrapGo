@@ -1,0 +1,2 @@
+ARG IMAGE_TAG
+FROM schickling/mailcatcher:${IMAGE_TAG}
