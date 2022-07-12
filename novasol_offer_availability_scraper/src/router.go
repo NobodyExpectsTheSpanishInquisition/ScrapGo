@@ -7,9 +7,9 @@ func CreateRouter() *mux.Router {
 }
 
 func RegisterRoutes(r *mux.Router) {
-
+	scrapOfferAvailability(r)
 }
 
 func scrapOfferAvailability(r *mux.Router) {
-	r.HandleFunc("/api/scrap/novasol/offer/availabile")
+	r.HandleFunc("/api/scrap/novasol/offer/available", scrapNovasolOfferAvailability)
 }
