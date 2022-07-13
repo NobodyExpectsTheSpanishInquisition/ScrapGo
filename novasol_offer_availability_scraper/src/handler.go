@@ -54,17 +54,3 @@ func handle(c command) (response, error) {
 
 	return newResponse(response), err
 }
-
-func analyze(availabilities offerAvailabilities, dateFrom time.Time, dateTo time.Time) bool {
-	available := false
-	datesRanges := availabilities.DatesRanges
-
-	for _, datesRange := range datesRanges {
-		if dateFrom.After(datesRange.From) && dateTo.Before(dateTo) {
-			available = true
-			break
-		}
-	}
-
-	return available
-}
